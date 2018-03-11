@@ -1,15 +1,21 @@
 <?php 
     $to = "default@ddd.com";
-    $from = $_POST['email'];
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $email = $_POST['email'];
-    $subject = "Form submission";
-    $message = $email . " " . $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    $full_message = $email . " " . $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
     
-    $headers = "From:" . $from;
-    $retval = mail($to,$subject,$message,$headers);
+    $retval = mail($to,$subject,$full_message);
     
+    echo $first_name;
+    echo $last_name;
+    echo $email;
+    echo $subject;
+    echo $message;
+
     if ($retval == true) {
         echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
     } else {
