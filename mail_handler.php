@@ -1,5 +1,4 @@
 <?php 
-if(isset($_POST['submit'])){
     $to = "default@ddd.com";
     $from = $_POST['email'];
     $first_name = $_POST['first_name'];
@@ -16,5 +15,4 @@ if(isset($_POST['submit'])){
     } else {
         echo "Message could not be sent... <a href='contacts.html'>Click here</a> to send another message.";
     }  
-}
 ?>
