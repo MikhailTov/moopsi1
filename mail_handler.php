@@ -10,11 +10,11 @@
     
     $retval = mail($to,$subject,$full_message);
     
-    echo $first_name;
-    echo $last_name;
-    echo $email;
-    echo $subject;
-    echo $message;
+    echo $first_name . "\n\n";
+    echo $last_name . "\n\n";
+    echo $email . "\n\n";
+    echo $subject . "\n\n";
+    echo $message . "\n\n";
 
     if ($retval == true) {
         echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
