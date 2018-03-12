@@ -324,12 +324,14 @@ img.pillows {
 /* Page watercolor_patterns */
 
 #expandedImg {
-    max-width: 485px;
-    max-height: 385px;
+    width: 100%;
 }
 
 .watercolor {
     margin-bottom: 150px;
 }
+.column-watercolor {
+    margin-top: 3em;
+} 
 
 /* Page watercolor_patterns end */
